@@ -73,12 +73,12 @@ var passwordOptions = {
 function generatePassword() {
   // get password parameters from user and check if valid
   var howManyChar = prompt("How many characters for the password?");
-  var password = Array(howManyChar);
   // if out of range
   if (howManyChar < 8 || howManyChar > 128) {
     alert("Invalid: must be between 8 and 128 characters");
     return null;
   }
+  var password = Array(howManyChar);
   var isSpecialChar = confirm("Use special characters?");
   var isNumber = confirm("Use numbers?");
   var isLowerCase = confirm("Use lowercase letters?");
@@ -107,14 +107,14 @@ function generatePassword() {
     }
     // OPTION 4: add a uppercase character
     else if (randPasswordType === 3 && isUpperCase) {
-      password[i] = passwordOptions.lowerLetterChars[Math.floor(Math.random() * 25)];
+      password[i] = passwordOptions.upperLetterChars[Math.floor(Math.random() * 25)];
     }
-    // IF broken somehow
+    // If broken somehow
     else {
       alert("The random password generator ran into a fatal error!");
+      return null;
     }
   }
-  alert(password);
   return password;
 }
 
