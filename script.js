@@ -73,8 +73,8 @@ var passwordOptions = {
 function generatePassword() {
   // get password parameters from user and check if valid
   var howManyChar = prompt("How many characters for the password?");
-  // if out of range
-  if (howManyChar < 8 || howManyChar > 128) {
+  // if out of range, or not a number
+  if (howManyChar < 8 || howManyChar > 128 || isNaN(howManyChar)) {
     alert("Invalid: must be between 8 and 128 characters");
     return null;
   }
