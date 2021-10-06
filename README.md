@@ -10,4 +10,4 @@ This a random password generator
 
 # Link
 
-https://github.com/MasonNewell/pw-generator
+https://masonnewell.github.io/pw-generator/
