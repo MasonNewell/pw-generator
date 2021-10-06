@@ -78,7 +78,7 @@ function generatePassword() {
     alert("Invalid: must be between 8 and 128 characters");
     return null;
   }
-  var RandomPassword = Array(howManyChar);
+  var randomPassword = Array(howManyChar);
   var isSpecialChar = confirm("Use special characters?");
   var isNumber = confirm("Use numbers?");
   var isLowerCase = confirm("Use lowercase letters?");
@@ -95,27 +95,26 @@ function generatePassword() {
     // OPTION 1: add a special character
     if (randPasswordType === 0 && isSpecialChar) {
       // password gets 1 random special character
-      RandomPassword[i] = passwordOptions.specialChars[Math.floor(Math.random() * 10)];
+      randomPassword[i] = passwordOptions.specialChars[Math.floor(Math.random() * 10)];
     }
     // OPTION 2: add a number
     else if (randPasswordType === 1 && isNumber) {
-      RandomPassword[i] = passwordOptions.numbers[Math.floor(Math.random() * 10)];
+      randomPassword[i] = passwordOptions.numbers[Math.floor(Math.random() * 10)];
     }
     // OPTION 3: add a lowercase character
     else if (randPasswordType === 2 && isLowerCase) {
-      RandomPassword[i] = passwordOptions.lowerLetterChars[Math.floor(Math.random() * 26)];
+      randomPassword[i] = passwordOptions.lowerLetterChars[Math.floor(Math.random() * 26)];
     }
     // OPTION 4: add a uppercase character
     else if (randPasswordType === 3 && isUpperCase) {
-      RandomPassword[i] = passwordOptions.upperLetterChars[Math.floor(Math.random() * 26)];
+      randomPassword[i] = passwordOptions.upperLetterChars[Math.floor(Math.random() * 26)];
     }
     // OPTION 5: no options assigned, reset index so loop doesnt progress without assignment
     else {
       i = i - 1;
-      console.log("Nothing was assigned, i= " + i);
     }
   }
-  return RandomPassword;
+  return randomPassword.join("");
 }
 
 // Write password to the #password input
