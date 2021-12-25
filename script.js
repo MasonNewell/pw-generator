@@ -94,7 +94,6 @@ function generatePassword() {
     var randPasswordType = Math.floor(Math.random() * 4);
     // OPTION 1: add a special character
     if (randPasswordType === 0 && isSpecialChar) {
-      // password gets 1 random special character
       randomPassword[i] = passwordOptions.specialChars[Math.floor(Math.random() * 10)];
     }
     // OPTION 2: add a number

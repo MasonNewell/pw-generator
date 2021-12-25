@@ -6,7 +6,7 @@ This a random password generator
 
 # Screenshot
 
-![Screenshot](./images/sub-ss.jpg)
+![Screenshot](./images/demo.jpg)
 
 # Link
 
